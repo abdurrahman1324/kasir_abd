@@ -1,0 +1,12 @@
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+RewriteEngine On
+
+RewriteRule ^barang/?$ barang/index.php [L]
+RewriteRule ^barang/add$ barang/add.php [L]
+RewriteRule ^barang/edit/([0-9]+)$ barang/edit.php?id=$1 [L]
+RewriteRule ^supplier/?$ supplier/index.php [L]
